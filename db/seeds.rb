@@ -10,3 +10,13 @@ Product.create!(
   image_url: 'ruby.jpg',
   price: 49.95
 )
+
+Product.create!(
+  title: 'Random Geek Book'
+  description: %{<p>
+    Really dense and mind-blowing prose.
+    Blahblah blah blahblah blah, blah et blah? Blah.
+  </p>},
+  image_url: 'cs.jpg',
+  price: 20.00
+)
