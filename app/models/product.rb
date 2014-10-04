@@ -1,5 +1,4 @@
 class Product < ActiveRecord::Base
-
   has_many :line_items
 
   validates :title, :description, :image_url, presence: true
