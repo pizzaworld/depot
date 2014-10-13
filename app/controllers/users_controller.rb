@@ -58,7 +58,8 @@ class UsersController < ApplicationController
   def destroy
     begin
       @user.destroy
-      flash[:notice] = "User #{@user.name} deleted"  rescue StandardError => e
+      flash[:notice] = "User #{@user.name} deleted"
+    rescue StandardError => e
       flash[:notice] = e.message
     end
     respond_to do |format|
@@ -67,7 +68,7 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+    private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
